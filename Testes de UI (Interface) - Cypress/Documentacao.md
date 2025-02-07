@@ -35,9 +35,9 @@ O objetivo deste teste foi verificar o comportamento do formulário de cadastro 
 - **Duração média por teste**: Aproximadamente 1,75 segundos
 
 ### **Relatório Detalhado**
-O relatório completo com detalhes dos testes realizados pode ser visualizado acessando o arquivo HTML gerado pelo Mocha:
+O relatório completo com detalhes dos testes realizados pode ser visualizado acessando o arquivo HTML ou Json gerado pelo Mocha:
 Em
-(\cypress\reports\mochawesome.html)
+(\cypress\reports\)
 
 ### **Conclusão**
 Todos os testes de UI para o formulário de cadastro de usuário passaram com sucesso, indicando que a aplicação está funcionando corretamente nos cenários testados.
