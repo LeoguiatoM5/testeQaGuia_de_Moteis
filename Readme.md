@@ -28,4 +28,4 @@ Se você tiver qualquer dúvida ou sugestão, fique à vontade para entrar em co
 - [LinkedIn: Leonardo Guiato](https://www.linkedin.com/in/leonardo-guiato/)
 
 **Obrigado!**
-"# testeQaGuia_de_Moteis" 
+
