@@ -1,0 +1,1 @@
+O api apresenta instabilidade , então quando for executar no terminal coloque, npm test -- --testTimeout=10000 para que não ocorra erro de timeout.  Apesar de eu colocar o tempo de resposta já no código. Se ocorrer erro de timeout, execute novamente com essa linha de comando no terminal.

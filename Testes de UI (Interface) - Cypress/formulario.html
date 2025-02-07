@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+    <style>
+        .mensagem-erro { color: red; }
+        .mensagem-sucesso { color: green; }
+    </style>
+</head>
+<body>
+    <h2>Cadastro de Usuário</h2>
+    <form id="form-cadastro">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required>
+        <div class="mensagem-erro" id="erro-nome"></div>
+        <br>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" required>
+        <div class="mensagem-erro" id="erro-email"></div>
+        <br>
+
+        <label for="confirmar-email">Confirmar E-mail:</label>
+        <input type="email" id="confirmar-email" required>
+        <div class="mensagem-erro" id="erro-confirmar-email"></div>
+        <br>
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" required>
+        <div class="mensagem-erro" id="erro-senha"></div>
+        <br>
+
+        <label for="confirmar-senha">Confirmar Senha:</label>
+        <input type="password" id="confirmar-senha" required>
+        <div class="mensagem-erro" id="erro-confirmar-senha"></div>
+        <br>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+    <div class="mensagem-sucesso" id="mensagem-sucesso"></div>
+
+    <script>
+        document.getElementById("form-cadastro").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let erros = false;
+            document.querySelectorAll(".mensagem-erro").forEach(el => el.textContent = "");
+            document.getElementById("mensagem-sucesso").textContent = "";
+
+            let nome = document.getElementById("nome").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let confirmarEmail = document.getElementById("confirmar-email").value.trim();
+            let senha = document.getElementById("senha").value;
+            let confirmarSenha = document.getElementById("confirmar-senha").value;
+
+            if (!nome) {
+                document.getElementById("erro-nome").textContent = "O campo Nome é obrigatório";
+                erros = true;
+            }
+            if (!email) {
+                document.getElementById("erro-email").textContent = "O campo E-mail é obrigatório";
+                erros = true;
+            }
+            if (!confirmarEmail) {
+                document.getElementById("erro-confirmar-email").textContent = "O campo Confirmar E-mail é obrigatório";
+                erros = true;
+            } else if (email !== confirmarEmail) {
+                document.getElementById("erro-confirmar-email").textContent = "Os e-mails digitados não coincidem";
+                erros = true;
+            }
+            if (!senha) {
+                document.getElementById("erro-senha").textContent = "O campo Senha é obrigatório";
+                erros = true;
+            } else if (!/(?=.*[A-Z])(?=.*\d).{8,}/.test(senha)) {
+                document.getElementById("erro-senha").textContent = "A senha deve ter no mínimo 8 caracteres, 1 letra maiúscula e 1 número";
+                erros = true;
+            }
+            if (!confirmarSenha) {
+                document.getElementById("erro-confirmar-senha").textContent = "O campo Confirmar Senha é obrigatório";
+                erros = true;
+            } else if (senha !== confirmarSenha) {
+                document.getElementById("erro-confirmar-senha").textContent = "As senhas digitadas não coincidem";
+                erros = true;
+            }
+            
+            if (!erros) {
+                document.getElementById("mensagem-sucesso").textContent = "Cadastro realizado com sucesso!";
+            }
+        });
+    </script>
+</body>
+</html>

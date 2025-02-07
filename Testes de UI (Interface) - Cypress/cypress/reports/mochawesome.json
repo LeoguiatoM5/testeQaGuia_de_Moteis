@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-02-07T14:43:46.290Z",
+    "end": "2025-02-07T14:43:53.464Z",
+    "duration": 7174,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9fd17355-426c-4d89-8c39-c938f2bd86fa",
+      "title": "",
+      "fullFile": "cypress\\e2e\\testeFormulario.cy.js",
+      "file": "cypress\\e2e\\testeFormulario.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "24ea139f-b751-4adb-a338-3ea4b448dc8e",
+          "title": "Testes de UI para o formulário de cadastro de usuário",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve exibir mensagem de sucesso ao preencher o formulário corretamente",
+              "fullTitle": "Testes de UI para o formulário de cadastro de usuário Deve exibir mensagem de sucesso ao preencher o formulário corretamente",
+              "timedOut": null,
+              "duration": 1762,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#nome').type('João Silva');\ncy.get('#email').type('joao.silva@example.com');\ncy.get('#confirmar-email').type('joao.silva@example.com');\ncy.get('#senha').type('Senha123');\ncy.get('#confirmar-senha').type('Senha123');\ncy.get('form').submit();\ncy.get('.mensagem-sucesso').should('contain', 'Cadastro realizado com sucesso!');",
+              "err": {},
+              "uuid": "a7ccbeb4-2e93-4dd1-9a5a-c2d115170b81",
+              "parentUUID": "24ea139f-b751-4adb-a338-3ea4b448dc8e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve exibir mensagens de erro ao deixar campos obrigatórios vazios",
+              "fullTitle": "Testes de UI para o formulário de cadastro de usuário Deve exibir mensagens de erro ao deixar campos obrigatórios vazios",
+              "timedOut": null,
+              "duration": 190,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('form').submit();\ncy.get('.mensagem-erro').should('contain', 'O campo Nome é obrigatório');\ncy.get('.mensagem-erro').should('contain', 'O campo E-mail é obrigatório');\ncy.get('.mensagem-erro').should('contain', 'O campo Confirmar E-mail é obrigatório');\ncy.get('.mensagem-erro').should('contain', 'O campo Senha é obrigatório');\ncy.get('.mensagem-erro').should('contain', 'O campo Confirmar Senha é obrigatório');",
+              "err": {},
+              "uuid": "150078cf-8a85-4227-bdf3-35f933afc807",
+              "parentUUID": "24ea139f-b751-4adb-a338-3ea4b448dc8e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve exibir erro de validação ao digitar uma senha fraca",
+              "fullTitle": "Testes de UI para o formulário de cadastro de usuário Deve exibir erro de validação ao digitar uma senha fraca",
+              "timedOut": null,
+              "duration": 1594,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#nome').type('João Silva');\ncy.get('#email').type('joao.silva@example.com');\ncy.get('#confirmar-email').type('joao.silva@example.com');\ncy.get('#senha').type('12345');\ncy.get('#confirmar-senha').type('12345');\ncy.get('form').submit();\ncy.get('.mensagem-erro').should('contain', 'A senha deve ter no mínimo 8 caracteres, 1 letra maiúscula e 1 número');",
+              "err": {},
+              "uuid": "411a8d89-982a-4a25-855d-766972bca42b",
+              "parentUUID": "24ea139f-b751-4adb-a338-3ea4b448dc8e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve exibir erro ao digitar e-mails diferentes nos campos de \"E-mail\" e \"Confirmação de E-mail\"",
+              "fullTitle": "Testes de UI para o formulário de cadastro de usuário Deve exibir erro ao digitar e-mails diferentes nos campos de \"E-mail\" e \"Confirmação de E-mail\"",
+              "timedOut": null,
+              "duration": 1654,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#nome').type('João Silva');\ncy.get('#email').type('joao.silva@example.com');\ncy.get('#confirmar-email').type('joao.silva2@example.com');\ncy.get('#senha').type('Senha123');\ncy.get('#confirmar-senha').type('Senha123');\ncy.get('form').submit();\ncy.get('.mensagem-erro').should('contain', 'Os e-mails digitados não coincidem');",
+              "err": {},
+              "uuid": "5cb492a5-429b-445a-8233-53172a52df4f",
+              "parentUUID": "24ea139f-b751-4adb-a338-3ea4b448dc8e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a7ccbeb4-2e93-4dd1-9a5a-c2d115170b81",
+            "150078cf-8a85-4227-bdf3-35f933afc807",
+            "411a8d89-982a-4a25-855d-766972bca42b",
+            "5cb492a5-429b-445a-8233-53172a52df4f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5200,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": true,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
