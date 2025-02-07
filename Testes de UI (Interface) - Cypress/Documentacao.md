@@ -36,8 +36,8 @@ O objetivo deste teste foi verificar o comportamento do formulário de cadastro 
 
 ### **Relatório Detalhado**
 O relatório completo com detalhes dos testes realizados pode ser visualizado acessando o arquivo HTML gerado pelo Mocha:
-
-[**Clique aqui para visualizar o relatório completo**](\cypress\reports\mochawesome.html)
+Em
+(\cypress\reports\mochawesome.html)
 
 ### **Conclusão**
 Todos os testes de UI para o formulário de cadastro de usuário passaram com sucesso, indicando que a aplicação está funcionando corretamente nos cenários testados.
