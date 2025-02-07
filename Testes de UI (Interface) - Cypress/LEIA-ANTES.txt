@@ -1,4 +1,6 @@
 Como não tinha um formulário eu criei um simples apenas para teste. 
-Para iniciar , entre no formulario.html abra o live-server pra fazer o fomulário abrir localmente.
+Para iniciar , entre no formulario.html abra o live-server e faça o fomulário abrir localmente.
 Substitua se for preciso, no código o caminho do link da página do formulário 
-Após isso  , abra o cypress vai até a pasta e2e , o arquivo de teste  é testeFormulario.js, e está pronto testar :).... 
+Após isso  , abra o cypress open , vai  até a pasta e2e , o arquivo de teste  é testeFormulario, e está pronto testar :).... 
+
+Obs * Substitua se for preciso, no código o caminho do link da página do formulário 
