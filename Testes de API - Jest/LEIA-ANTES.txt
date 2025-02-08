@@ -1,1 +1,5 @@
-Quando for executar no terminal coloque, npm test -- --testTimeout=10000  Se ocorrer erro de timeout, execute novamente com essa linha de comando no terminal.
+Quando for executar no terminal coloque, 
+
+npm test -- --testTimeout=10000 
+
+se houver problema de timeout.
