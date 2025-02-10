@@ -9,7 +9,7 @@ Esta documentação descreve os resultados de testes realizados na API JSONPlace
 - **Comando de Execução**: `npm test -- --testTimeout=10000`
 - **Versão do Jest**: 1.0.0
 
----![Descrição da Imagem](jest_teste.jpg)
+---![Descrição da Imagem](test.jpg)
 
 ## **Cenários de Teste**
 
@@ -24,6 +24,11 @@ Esta documentação descreve os resultados de testes realizados na API JSONPlace
 ### 3. **Retornar erro 404 ao acessar um endpoint inválido**
 - **Descrição**: Verifica se a API retorna erro 404 quando acessado um endpoint inválido.
 - **Resultado**: A API retornou erro 404 em **71 ms** (executado 1 vez), **71 ms** (executado 2 vezes), e **64 ms** (executado 3 vezes).
+
+### 4. **Forçar erro 500 ao acessar o endpoint de usuários**
+- **Descrição**: Simula um erro 500 ao acessar o endpoint de usuários e verifica se o status retornado é 500 com a mensagem de erro correta.
+- **Resultado**: A API retornou erro 500 em **75 ms** e a mensagem de erro foi **"Erro interno do servidor"**.
+
 
 ---
 

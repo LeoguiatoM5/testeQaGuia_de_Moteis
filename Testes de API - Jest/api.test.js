@@ -1,4 +1,5 @@
 const request = require('supertest');
+const nock = require('nock');
 
 const API_URL = 'https://jsonplaceholder.typicode.com';
 
@@ -41,5 +42,21 @@ describe('Testes da API JSONPlaceholder', () => {
 
     expect(response.status).toBe(404);
   }, 10000);
+
+  it('Deve forçar erro 500 ao acessar o endpoint de usuários', async () => {
+   
+    nock(API_URL)
+      .get('/users')
+      .reply(500, { error: 'Erro interno do servidor' });
+
+    const response = await request(API_URL).get('/users');
+
+    expect(response.status).toBe(500);
+    expect(response.body.error).toBe('Erro interno do servidor');
+  }, 10000);
+
+
+
+
 
 });
