@@ -45,6 +45,7 @@ Esta documentação descreve os resultados de testes realizados na API JSONPlace
   - **Deve criar um novo usuário com sucesso (status 201)**: **Passou**
   - **Deve retornar um objeto válido ao criar um usuário sem nome**: **Passou**
   - **Deve retornar erro 404 ao acessar um endpoint inválido**: **Passou**
+  - **Deve retornar erro 500 ao um erro no servidor**: **Passou**
 
 ---
 
